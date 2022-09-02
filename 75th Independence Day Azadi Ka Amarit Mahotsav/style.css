@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:wgt@300;400;500;600;700;&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(67, 23, 117);
+}
+.container
+{
+    position: relative;
+    /* width: 800px;
+    height: 500px; */
+    width: 1200px;
+    height: 600px;
+    background: rgb(67, 23, 117);
+}
+.container .clip
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .clip.clip1
+{
+    background: url(2i.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
+}
+.container .clip.clip2
+{
+    background: url(1i.jpg);
+    background-size: cover;
+    clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
+}
+.container .clip.clip3
+{
+    background: url(3i.jpg);
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
+}
+.container:hover .clip
+{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover
+{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.container .clip .content 
+{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 70%;
+    padding: 20px;
+    background: rgb(189, 166, 216);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .clip:hover .content
+{
+    bottom: 0;
+    opacity: 0.7;
+}
+.text-box
+{
+    padding-left: 8%;
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+}
+.text-box p
+{
+    font-size: 30px;
+    font-weight: 600;
+}
+.text-box h1
+{
+    font-family: 'Fredoka One', sans-serif, cursive;
+    font-weight: 10;
+    font-size: 100px;
+    line-height: 90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    /* margin-left: -10px; */
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.text-box h3
+{
+    font-size: 30px;
+    font-weight: 600;
+}
+.text-box h4
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+.container .clip .cc
+{
+    margin-bottom: 30px;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    width: 70%;
+    padding: 20px;
+    opacity: 0;
+    transition: 1s;
+}
+.container .clip:hover .cc
+{
+    bottom: 0;
+    opacity: 1;
+}
